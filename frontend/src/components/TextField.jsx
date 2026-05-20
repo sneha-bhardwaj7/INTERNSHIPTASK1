@@ -1,6 +1,6 @@
 export function TextField({ label, error, hint, multiline = false, className = "", ...props }) {
   const sharedClasses =
-    "w-full rounded-2xl border border-brand-100/80 bg-white/95 px-4 py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-300 focus:ring-4 focus:ring-brand-100";
+    "w-full rounded-2xl border border-brand-100/80 bg-white/95 px-4 py-4 sm:py-3 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-300 focus:ring-4 focus:ring-brand-100";
 
   return (
     <label className="grid gap-2">

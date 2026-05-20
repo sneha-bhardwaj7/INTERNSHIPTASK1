@@ -7,8 +7,8 @@ export default defineConfig({
   server: {
     port: 5173
   },
-
   preview: {
-    allowedHosts: ["internshiptask1-xqdk.onrender.com"]
+    // Allow preview from external hosts (Render preview). Using wildcard to avoid blocked host errors.
+    allowedHosts: ["*"]
   }
 });
