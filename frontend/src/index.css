@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-50 text-slate-900 antialiased;
+    font-family: "Manrope", ui-sans-serif, system-ui;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: rgba(37, 99, 235, 0.2);
+    color: #1e3a8a;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply border border-white/70 bg-white/85 shadow-card backdrop-blur-2xl;
+  }
+
+  .surface-ring {
+    @apply ring-1 ring-brand-100/70;
+  }
+}
