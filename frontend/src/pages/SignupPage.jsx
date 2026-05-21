@@ -82,7 +82,7 @@ export function SignupPage() {
       >
         <div className="glass-card surface-ring rounded-[30px] p-4 shadow-card sm:rounded-[34px] sm:p-8">
           <div className="mb-6 space-y-4">
-            <div className="inline-flex items-center rounded-full bg-brand-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-brand-600 ring-1 ring-brand-100">
+            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-sky-500/15 via-blue-500/10 to-cyan-400/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-sky-700 ring-1 ring-sky-200">
               Secure onboarding
             </div>
             <div className="space-y-3">
@@ -91,14 +91,14 @@ export function SignupPage() {
                 A more premium, production-ready signup flow with real validation, polished layout, and a live backend connection.
               </p>
             </div>
-            <div className="grid gap-3 rounded-[24px] border border-brand-100/80 bg-brand-50/60 p-4 sm:grid-cols-3">
+            <div className="grid gap-3 rounded-[24px] border border-sky-100/80 bg-sky-50/70 p-4 sm:grid-cols-3">
               {[
                 ["1", "Validate"],
                 ["2", "Store in MongoDB"],
                 ["3", "Review in admin view"]
               ].map(([number, label]) => (
-                <div key={label} className="rounded-2xl bg-white/80 p-4 text-center shadow-sm">
-                  <div className="mx-auto mb-2 grid h-9 w-9 place-items-center rounded-full bg-brand-500 text-sm font-extrabold text-white">
+                <div key={label} className="rounded-2xl bg-white/90 p-4 text-center shadow-[0_12px_30px_rgba(14,165,233,0.12)] ring-1 ring-sky-100/70">
+                  <div className="mx-auto mb-2 grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-sky-500 via-blue-500 to-cyan-400 text-sm font-extrabold text-white shadow-soft">
                     {number}
                   </div>
                   <p className="text-sm font-semibold text-slate-700">{label}</p>

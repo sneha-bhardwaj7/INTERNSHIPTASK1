@@ -129,7 +129,7 @@ export function ApplicationsPage() {
         <div className="mb-6 flex flex-col gap-6 xl:flex-row xl:items-end xl:justify-between">
           {/* LEFT */}
           <div className="space-y-3 w-full">
-            <div className="inline-flex items-center rounded-full bg-brand-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-brand-600 ring-1 ring-brand-100">
+            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-sky-500/15 via-blue-500/10 to-cyan-400/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-sky-700 ring-1 ring-sky-200">
               MongoDB-backed admin view
             </div>
 
@@ -153,13 +153,13 @@ export function ApplicationsPage() {
             ].map(([label, value]) => (
               <div
                 key={label}
-                className="flex-1 min-w-[110px] rounded-2xl border border-brand-100 bg-brand-50/70 px-4 py-3 text-center"
+                className="flex-1 min-w-[110px] rounded-2xl border border-sky-100 bg-white/80 px-4 py-3 text-center shadow-sm"
               >
-                <div className="text-lg font-black text-brand-700">
+                <div className="text-lg font-black text-sky-700">
                   {value}
                 </div>
 
-                <div className="break-words text-[10px] font-bold uppercase tracking-[0.12em] text-brand-500 sm:text-xs">
+                <div className="break-words text-[10px] font-bold uppercase tracking-[0.12em] text-sky-500 sm:text-xs">
                   {label}
                 </div>
               </div>
@@ -181,7 +181,7 @@ export function ApplicationsPage() {
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Search by name, email, company, or phone"
-                className="w-full rounded-2xl border border-brand-100/80 bg-white/95 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-brand-300 focus:ring-4 focus:ring-brand-100"
+                className="soft-input w-full rounded-2xl px-4 py-3 text-sm text-slate-900"
               />
             </label>
 
@@ -194,8 +194,8 @@ export function ApplicationsPage() {
                   onClick={() => setStatus(option)}
                   className={`rounded-2xl px-4 py-3 text-sm font-bold capitalize transition ${
                     status === option
-                      ? "bg-brand-500 text-white shadow-soft"
-                      : "border border-brand-100 bg-white/90 text-slate-600 hover:bg-brand-50"
+                      ? "bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-500 text-white shadow-soft"
+                      : "border border-sky-100 bg-white/90 text-slate-600 hover:bg-sky-50"
                   }`}
                 >
                   {option}
@@ -206,8 +206,8 @@ export function ApplicationsPage() {
 
           {/* LOADING */}
           {loading ? (
-            <div className="flex min-h-[320px] items-center justify-center rounded-[28px] border border-brand-100 bg-brand-50/60">
-              <span className="inline-flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-semibold text-brand-700 shadow-sm">
+            <div className="flex min-h-[320px] items-center justify-center rounded-[28px] border border-sky-100 bg-sky-50/70">
+              <span className="inline-flex items-center gap-3 rounded-full bg-white px-4 py-3 text-sm font-semibold text-sky-700 shadow-sm">
                 <Spinner />
                 Loading applications...
               </span>
@@ -237,7 +237,7 @@ export function ApplicationsPage() {
                     delay: index * 0.04,
                     duration: 0.35,
                   }}
-                  className="rounded-[28px] border border-brand-100/80 bg-white/90 p-4 shadow-sm sm:p-5"
+                  className="rounded-[28px] border border-sky-100/80 bg-white/92 p-4 shadow-[0_16px_40px_rgba(14,165,233,0.10)] sm:p-5"
                 >
                   <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
                     {/* LEFT CONTENT */}

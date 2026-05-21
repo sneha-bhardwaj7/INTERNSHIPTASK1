@@ -18,12 +18,28 @@ const env = {
 	nodeEnv: process.env.NODE_ENV || 'development'
 };
 
+const allowedOrigins = [
+	env.clientOrigin,
+	'http://localhost:5173',
+	'http://127.0.0.1:5173',
+	...(process.env.ALLOWED_ORIGINS || '')
+		.split(',')
+		.map((origin) => origin.trim())
+		.filter(Boolean)
+];
+
 const app = express();
 
 app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(
 	cors({
-		origin: [env.clientOrigin, 'http://localhost:5173', 'http://127.0.0.1:5173'],
+		// Allow known frontend origins (including optional ALLOWED_ORIGINS list).
+		origin: (origin, callback) => {
+			if (!origin || allowedOrigins.includes(origin)) {
+				return callback(null, true);
+			}
+			return callback(new Error(`CORS blocked: ${origin}`));
+		},
 		credentials: true
 	})
 );

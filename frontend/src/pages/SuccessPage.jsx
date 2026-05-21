@@ -22,11 +22,11 @@ export function SuccessPage() {
         className="w-full max-w-[560px]"
       >
         <div className="glass-card surface-ring rounded-[30px] p-4 text-center shadow-card sm:rounded-[34px] sm:p-8">
-          <div className="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-3xl bg-brand-500 text-2xl font-black text-white shadow-soft">
+          <div className="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-3xl bg-gradient-to-br from-sky-500 via-blue-500 to-cyan-400 text-2xl font-black text-white shadow-soft">
             P
           </div>
           <div className="space-y-3">
-            <div className="inline-flex items-center rounded-full bg-brand-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-brand-600 ring-1 ring-brand-100">
+            <div className="inline-flex items-center rounded-full bg-gradient-to-r from-sky-500/15 via-blue-500/10 to-cyan-400/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-sky-700 ring-1 ring-sky-200">
               Submitted successfully
             </div>
             <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-[2.4rem]">Welcome, {application.fullName.split(" ")[0] || "there"}.</h1>
@@ -35,15 +35,15 @@ export function SuccessPage() {
             </p>
           </div>
 
-          <div className="mt-8 grid gap-4 rounded-[28px] border border-brand-100/80 bg-brand-50/60 p-4 text-left sm:grid-cols-2 sm:p-5">
-            {[
-              ["Application ID", application.id],
-              ["Email", application.email],
+          <div className="mt-8 grid gap-4 rounded-[28px] border border-sky-100/80 bg-sky-50/70 p-4 text-left sm:grid-cols-2 sm:p-5">
+              {[ 
+                ["Application ID", application.id],
+                ["Email", application.email],
               ["Company", application.companyName],
               ["Agency", application.isAgency ? "Yes" : "No"]
             ].map(([label, value]) => (
-              <div key={label} className="rounded-2xl bg-white/80 p-4 shadow-sm">
-                <span className="mb-1 block text-xs font-bold uppercase tracking-[0.18em] text-brand-500">{label}</span>
+                <div key={label} className="rounded-2xl bg-white/90 p-4 shadow-sm ring-1 ring-sky-100/70">
+                  <span className="mb-1 block text-xs font-bold uppercase tracking-[0.18em] text-sky-600">{label}</span>
                 <strong className="break-words text-sm text-slate-800">{value}</strong>
               </div>
             ))}
