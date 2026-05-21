@@ -10,8 +10,8 @@ export function ToggleGroup({ label, error, value, options, onChange }) {
               key={option.value}
               className={`flex cursor-pointer items-center justify-center rounded-2xl border px-4 py-4 sm:py-3 text-sm font-semibold transition ${
                 selected
-                  ? "border-brand-300 bg-brand-50 text-brand-700 shadow-soft"
-                  : "border-brand-100 bg-white/95 text-slate-600 hover:border-brand-200 hover:bg-brand-50/60"
+                  ? "border-transparent bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-500 text-white shadow-soft"
+                  : "border-sky-100 bg-white/95 text-slate-600 hover:border-sky-200 hover:bg-sky-50/70"
               }`}
             >
               <input

@@ -1,7 +1,7 @@
 export function EmptyState({ title, description, action }) {
   return (
-    <div className="grid gap-4 rounded-[28px] border border-white/70 bg-white/80 p-8 text-center shadow-card backdrop-blur-2xl">
-      <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-600 ring-1 ring-brand-100">
+    <div className="grid gap-4 rounded-[28px] border border-sky-100/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(239,246,255,0.85))] p-8 text-center shadow-card backdrop-blur-2xl">
+      <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-sky-500 via-blue-500 to-cyan-400 text-white ring-1 ring-sky-100">
         <span className="text-xl font-black">P</span>
       </div>
       <div className="grid gap-2">
